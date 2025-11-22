@@ -9,7 +9,20 @@ import Footer from "@/components/footer";
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc){_id, title, slug, publishedAt, heroImage, subtitle, tags}`;
+]|order(publishedAt desc){
+  _id, 
+  title, 
+  slug, 
+  publishedAt, 
+  heroImage{
+    asset->{
+      _id,
+      url
+    }
+  }, 
+  subtitle, 
+  tags
+}`;
 
 const options = { next: { revalidate: 30 } };
 
@@ -35,9 +48,11 @@ export default async function WorkPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => {
+          console.log('Post data:', post.title, 'heroImage:', post.heroImage);
           const postImageUrl = post.heroImage
             ? urlFor(post.heroImage)?.width(550).height(310).url()
             : null;
+          console.log('Generated URL:', postImageUrl);
           return (
             <Link href={`/${post.slug.current}`} key={post._id} className="group h-full">
               <article className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-[0_1px_0_#0000000d] backdrop-blur-sm transition-all duration-300 dark:border-neutral-800 dark:bg-black/40 hover:shadow-lg hover:-translate-y-2 h-[480px]">

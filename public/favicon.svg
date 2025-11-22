@@ -1,0 +1,25 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="topFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leftFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3730a3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4338ca;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rightFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Top face -->
+  <path d="M16 4 L26 8 L16 12 L6 8 Z" fill="url(#topFace)" stroke="#1e1b4b" stroke-width="0.5"/>
+  
+  <!-- Left face -->
+  <path d="M6 8 L16 12 L16 24 L6 20 Z" fill="url(#leftFace)" stroke="#1e1b4b" stroke-width="0.5"/>
+  
+  <!-- Right face -->
+  <path d="M16 12 L26 8 L26 20 L16 24 Z" fill="url(#rightFace)" stroke="#1e1b4b" stroke-width="0.5"/>
+</svg>

@@ -142,7 +142,7 @@ export default function ContactPage() {
               {/* Status Messages */}
               {status === "success" && (
                 <div className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400">
-                  Thank you! Your message has been sent successfully. I'll get back to you soon.
+                  Thank you! Your message has been sent successfully. I&apos;ll get back to you soon.
                 </div>
               )}
               

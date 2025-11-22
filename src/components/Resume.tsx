@@ -27,7 +27,7 @@ export default function Resume() {
           </h2>
           
           <p className="text-gray-400 text-lg leading-relaxed mb-8">
-            View my resume to explore my experience, skills, and qualifications in detail. I've 
+            View my resume to explore my experience, skills, and qualifications in detail. I&apos;ve 
             collaborated with industry-leading companies to deliver exceptional results for 
             various projects.
           </p>

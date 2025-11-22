@@ -60,10 +60,10 @@ export default function Footer() {
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-white mb-2">
-                Let's work together
+                Let&apos;s work together
               </h3>
               <p className="text-gray-400">
-                Ready to bring your ideas to life? Let's create something amazing together.
+                Ready to bring your ideas to life? Let&apos;s create something amazing together.
               </p>
             </div>
             <Link 
@@ -88,7 +88,7 @@ export default function Footer() {
               Tolga Zorlu
             </h4>
             <p className="text-gray-400 mb-6">
-              I'm a fullstack designer with a passion for creating an amazing experience for users.
+              I&apos;m a fullstack designer with a passion for creating an amazing experience for users.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (

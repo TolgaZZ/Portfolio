@@ -372,7 +372,7 @@ export default async function PostPage({
               <div className="bg-blue-900/30 border border-blue-800 rounded-xl p-6">
                 <h4 className="text-lg font-semibold mb-2">Interested in similar work?</h4>
                 <p className="text-gray-300 text-sm mb-4">
-                  I'm available for freelance projects and consulting. Let's discuss how I can help bring your ideas to life.
+                  I&apos;m available for freelance projects and consulting. Let&apos;s discuss how I can help bring your ideas to life.
                 </p>
                 <Link
                   href="/contact"

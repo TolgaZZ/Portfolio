@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function AboutMe() {
     return (
         <section className="bg-black px-6 py-24 md:py-32">

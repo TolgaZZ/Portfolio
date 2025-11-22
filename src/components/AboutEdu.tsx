@@ -16,7 +16,7 @@ export default function AboutEdu() {
             {/* Left Column - Dates and Basic Info */}
             <div className="space-y-4">
               <div className="text-blue-600 font-medium text-lg">2022 - Going On</div>
-              <h3 className="text-3xl font-bold text-white">Bachelor's Degree</h3>
+              <h3 className="text-3xl font-bold text-white">Bachelor&apos;s Degree</h3>
               <p className="text-neutral-400 text-lg">Amsterdam University of Applied Sciences</p>
             </div>
 

@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
       // In test mode, safest is from *and* to = your own address
       from: "tolga.z@outlook.com",
       to: "tolga.z@outlook.com",
-      reply_to: email, // so you can hit "Reply" to answer the sender
+      replyTo: email, // so you can hit "Reply" to answer the sender
       subject: `New Contact Form Message: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

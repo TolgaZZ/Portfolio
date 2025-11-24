@@ -55,14 +55,14 @@ export default async function WorkPage() {
           console.log('Generated URL:', postImageUrl);
           return (
             <Link href={`/${post.slug.current}`} key={post._id} className="group h-full">
-              <article className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-[0_1px_0_#0000000d] backdrop-blur-sm transition-all duration-300 dark:border-neutral-800 dark:bg-black/40 hover:shadow-lg hover:-translate-y-2 h-[480px]">
+              <article className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-black/40 shadow-[0_1px_0_#0000000d] backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2 h-[480px]">
                 <div className="p-6 md:p-8 h-full flex flex-col">
                   <div className="mb-4">
-                    <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100 md:text-2xl line-clamp-2 mb-2">{post.title}</h3>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">{post.subtitle}</p>
+                    <h3 className="text-xl font-semibold text-neutral-100 md:text-2xl line-clamp-2 mb-2">{post.title}</h3>
+                    <p className="text-sm text-neutral-400 line-clamp-2">{post.subtitle}</p>
                   </div>
 
-                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-neutral-100 ring-1 ring-inset ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800 mb-4">
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-inset ring-neutral-800 mb-4">
                     {postImageUrl ? (
                       <img
                         src={postImageUrl}
@@ -72,7 +72,7 @@ export default async function WorkPage() {
                         height={310}
                       />
                     ) : (
-                      <div className="absolute inset-0 bg-[radial-gradient(1000px_400px_at_120%_-10%,rgba(0,0,0,0.08),transparent)] dark:bg-[radial-gradient(1000px_400px_at_120%_-10%,rgba(255,255,255,0.06),transparent)]" />
+                      <div className="absolute inset-0 bg-[radial-gradient(1000px_400px_at_120%_-10%,rgba(255,255,255,0.06),transparent)]" />
                     )}
                   </div>
 
@@ -80,14 +80,14 @@ export default async function WorkPage() {
                     {post.tags && post.tags.length > 0 && (
                       <div className="mb-4 flex flex-wrap gap-2">
                         {post.tags.slice(0, 4).map((tag: string) => (
-                          <span key={tag} className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-300">
+                          <span key={tag} className="rounded-full border border-neutral-800 px-3 py-1 text-xs text-neutral-300">
                             {tag}
                           </span>
                         ))}
                       </div>
                     )}
                     
-                    <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs text-neutral-800 ring-1 ring-inset ring-neutral-200 backdrop-blur dark:bg-black/40 dark:text-neutral-200 dark:ring-neutral-800">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-xs text-neutral-200 ring-1 ring-inset ring-neutral-800 backdrop-blur">
                       View case
                       <svg className="h-3.5 w-3.5 text-blue-400" viewBox="0 0 24 24" fill="none">
                         <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.5" />

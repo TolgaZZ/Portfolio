@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Tolga Zorlu - Portfolio",
   description: "UI/UX Designer & Developer",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.svg?v=2",
   },
 };
 

@@ -9,9 +9,21 @@ import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, heroImage, subtitle, tags}`;
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, heroImage, subtitle, tags, projectType, teamSize}`;
 
 const options = { next: { revalidate: 30 } };
+
+// Helper function to display project type properly
+const displayProjectType = (type: string) => {
+  const types = {
+    'solo': 'Solo Project',
+    'team': 'Team Project', 
+    'client': 'Client Project',
+    'opensource': 'Open Source'
+  };
+  return types[type as keyof typeof types] || type;
+};
+
 export default async function ProjectCards() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
 

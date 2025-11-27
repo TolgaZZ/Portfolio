@@ -53,7 +53,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-400 mx-auto mb-12 max-w-4xl leading-relaxed">
-              I love to blend design aesthetics with technical expertise to create stunning, functional digital experiences that drive results.
+              A UI/UX-focused software developer in my final year of Communication & Multimedia Design in Amsterdam.
             </p>
 
             <div className="flex flex-row gap-4 justify-center items-center">

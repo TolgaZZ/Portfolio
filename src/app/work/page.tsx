@@ -21,10 +21,23 @@ const POSTS_QUERY = `*[
     }
   }, 
   subtitle, 
-  tags
+  tags,
+  projectType,
+  teamSize
 }`;
 
 const options = { next: { revalidate: 30 } };
+
+// Helper function to display project type properly
+const displayProjectType = (type: string) => {
+  const types = {
+    'solo': 'Solo Project',
+    'team': 'Team Project', 
+    'client': 'Client Project',
+    'opensource': 'Open Source'
+  };
+  return types[type as keyof typeof types] || type;
+};
 
 export default async function WorkPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);

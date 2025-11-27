@@ -20,6 +20,7 @@ const PROJECT_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   publishedAt,
   body,
   additionalContent,
+  projectType,
   _id
 }`;
 
@@ -30,6 +31,17 @@ const urlFor = (source: SanityImageSource) =>
     : null;
 
 const options = { next: { revalidate: 30 } };
+
+// Helper function to display project type properly
+const displayProjectType = (type: string) => {
+  const types = {
+    'solo': 'Solo Project',
+    'team': 'Team Project', 
+    'client': 'Client Project',
+    'opensource': 'Open Source'
+  };
+  return types[type as keyof typeof types] || type;
+};
 
 export default async function PostPage({
   params,
@@ -312,7 +324,9 @@ export default async function PostPage({
                   <h4 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-2">
                     Type
                   </h4>
-                  <p className="text-white">Solo Project</p>
+                  <p className="text-white">
+                    {post.projectType ? displayProjectType(post.projectType) : 'Solo Project'}
+                  </p>
                 </div>
 
                 {/* My Role */}
